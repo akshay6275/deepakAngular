@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<div class="container col-lg-6">
+    <h1 class="text-center">Order Input</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+          
+          <div class="form-group">
+            <label for="symbol">Symbol :</label>
+            <input type="text"  [(ngModel)]="order.symbol" class="form-control" 
+                   id="symbol" [(ngModel)]="username" placeholder="Enter Symbol"
+                   name="symbol">
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity :</label>
+            <input type="text"  [(ngModel)]="order.quantity"
+            class="form-control"  id="symbol" [(ngModel)]="quantity"  placeholder="Enter Quantity"
+              name="quantity">
+          </div>
+
+          <div class="form-group">
+            <label for="max_price">Max_price :</label>
+            <input type="text" [(ngModel)]="order.max_price"
+            class="form-control" id="max_price"  placeholder="Enter Max_price"
+              name="max_price">
+          </div>
+          <div class="form-group">
+            <label for="orderType">Ordertype :</label>
+            <input type="text"  [(ngModel)]="order.orderType"
+             class="form-control"  id="orderType"   placeholder="Enter Order Type"
+              name="orderType">
+          </div>
+
+          <button (click)=placeOrder(order) class="btn btn-success">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
